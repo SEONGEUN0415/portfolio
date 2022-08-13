@@ -29,7 +29,13 @@
 
     /* Size */
     --size-border-radious: 4px;
+
+    /* Animation */
+    --animation-duration: 300ms;
+
+
 }
+
 
 /* Universal tags */
 * {
@@ -67,7 +73,10 @@ h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
     color: var(--color-black);
-    margin: 16px 0;
+    padding: 15px 0;
+    margin: 0px;
+    position:relative;
+    top:20px;
 }
 
 h2 {
@@ -145,14 +154,15 @@ p {
 }
 
 .home__avatar {
-    width: 250px;
-    height: 250px;
+    width: 230px;
+    height: 230px;
     border-radius: 50%;
     border: 2px solid var(--color-light-white);
 }
 
 .home__title, .home__description {
     color: var(--color-white);
+    padding: 20px 0;
 }
 
 .home__contact {
@@ -165,3 +175,47 @@ p {
     margin-top: 30px;
 }
 
+/* Section common */
+
+.section {
+    text-align: center; 
+    max-width: 1130px;
+    margin: auto;
+    padding: 0 50px;
+}
+
+/* About */
+#about{
+    background-color: var(--color-yellow);
+    text-align:center;
+}
+
+.major {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+    padding: 40px 0;
+}
+
+
+.major i{
+    width: 100px;
+    padding:15px;
+    color:var(--color-orange);
+    border: 2px solid var(--color-orange);
+    border-radius: 50%;
+    font-size: 65px;
+}
+
+.major__item:hover i{
+    color: var(--color-light-grey);
+    transform: rotate(-30deg) scale(1.2);
+    border:none;
+    transition: all var(--animation-duration) ease;
+    
+
+}
+
+.major__item h2{
+    color: var(--color-orange);
+}
