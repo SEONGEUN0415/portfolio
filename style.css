@@ -14,6 +14,7 @@
     --color-yellow: #fff7d1;
     --color-orange: #feb546;
     --color-black: #000000;
+    --color-dark-blue: #131335;
 
     /* Font size */
     --font-large: 48px;
@@ -56,6 +57,7 @@ a {
 
 ul {
     padding-left: 0;
+    
 }
 
 button {
@@ -72,7 +74,6 @@ li {
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    color: var(--color-black);
     padding: 15px 0;
     margin: 0px;
     position:relative;
@@ -82,21 +83,18 @@ h1 {
 h2 {
     font-size: var(--font-medium);
     font-weight: var(--weight-semi-bold);
-    color: var(--color-black);
     margin: 8px 0;
 }
 
 h3 {
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    color: var(--color-black);
     margin: 8px 0;
 }
 
 p { 
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    color: var(--color-black);
     margin: 4px 0;
 }
 
@@ -179,9 +177,12 @@ p {
 
 .section {
     text-align: center; 
-    max-width: 1130px;
     margin: auto;
     padding: 0 50px;
+}
+.section__container {
+    max-width: 1050px;
+    margin: auto;
 }
 
 /* About */
@@ -190,10 +191,14 @@ p {
     text-align:center;
 }
 
+#about p {
+    color: grey;
+}
+
 .major {
     display: flex;
     justify-content: space-around;
-    margin: 20px 0;
+    margin: 0;
     padding: 40px 0;
 }
 
@@ -207,15 +212,92 @@ p {
     font-size: 65px;
 }
 
+.major__item{
+    width:100px;
+}
+
 .major__item:hover i{
     color: var(--color-light-grey);
     transform: rotate(-30deg) scale(1.2);
     border:none;
     transition: all var(--animation-duration) ease;
-    
-
 }
 
 .major__item h2{
     color: var(--color-orange);
 }
+
+/* skills */
+#skills {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 30px 0;
+    height: 700px;
+}
+
+#skills p {
+    margin: 20px 0;
+}
+
+
+.skillset {
+    display:flex;
+    justify-content: space-around;
+    margin: 50px 0;  
+    height: 300px;
+    
+}
+.skillset__title{
+    color: var(--color-white);
+    padding: 10px;
+}
+
+.skillset__left {
+    flex-basis: 60%;
+    background-color: var(--color-dark-grey)
+}
+
+.skill__description__item {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 40px;
+}
+
+
+.skill__bar {
+    width: 550px;
+    height: 3px;
+    background-color: var(--color-light-grey);
+    margin-left: 40px;
+
+}
+
+.skill__value{
+    width: 90%;
+    height:3px;
+    background-color: var(--color-orange);
+}
+
+.skillset__right {
+    flex-basis: 40%;
+    background-color: var(--color-light-grey);
+    
+}
+
+.etc {
+    background-color: var(--color-grey);
+    height: 50%;
+    position: relative;
+    top: 43px;   
+    padding:5px;
+
+
+}
+
+
+.etc__list {
+    margin: 0;
+    padding: 10px;
+}
+
+
