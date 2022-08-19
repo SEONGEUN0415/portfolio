@@ -394,8 +394,8 @@ p {
 /* testimonial */
 #testimonial {
     background-color: var(--color-light-white);
-    margin: 50px 0;    
-    padding: 15px 5px;
+    margin: 50px 0 0 0;    
+    padding: 30px 5px;
 }
 
 #testimonial h3 {
@@ -403,7 +403,7 @@ p {
 }
 
 .testimonial {
-    margin: 32px;
+    margin: 32px 100px;
     display: flex;
 }
 
@@ -435,4 +435,32 @@ p {
 
 .name {
     color: var(--color-light-grey);
+}
+
+/* contact */
+#contact {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    padding-bottom: 32px;
+}
+
+.contact__email {
+    margin: 24px;
+}
+
+.contact__links i{
+    display: inline-flex;
+    justify-content: center;
+    font-size: var(--font-large);
+    margin: 5px;
+}
+
+.contact__links i:hover {
+    transform: scale(1.1);
+    color: var(--color-dark-blue);
+    transition: all var(--animation-duration) ease-in;
+}
+
+.contact__rights {
+    margin: 20px;
 }
