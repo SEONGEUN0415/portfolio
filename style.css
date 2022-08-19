@@ -189,6 +189,7 @@ p {
 #about{
     background-color: var(--color-yellow);
     text-align:center;
+    padding: 10px 0;
 }
 
 #about p {
@@ -215,6 +216,8 @@ p {
 
 .major__item{
     width:100px;
+    text-align: center;
+    color: var(--color-orange); 
 }
 
 .major__item:hover i{
@@ -224,8 +227,9 @@ p {
     transition: all var(--animation-duration) ease;
 }
 
-.major__item h2{
-    color: var(--color-orange);
+.major__title {
+    display: flex;
+    justify-content: center;
 }
 
 /* skills */
@@ -386,5 +390,49 @@ p {
     position: relative;
     left: 40%;
     margin-top: 10px;
-    
+}
+/* testimonial */
+#testimonial {
+    background-color: var(--color-light-white);
+    margin: 50px 0;    
+    padding: 15px 5px;
+}
+
+#testimonial h3 {
+    padding: 10px;
+}
+
+.testimonial {
+    margin: 32px;
+    display: flex;
+}
+
+.testimonial__avata {
+    width: 150px;
+    height: 150px;
+    position: relative;
+    top: 10px;
+}
+
+.testimonial__speech-bubble {
+    background-color: var(--color-white);
+    border-radius: var(--size-border-radious); 
+    margin-bottom: 20px;
+    padding: 15px;
+}
+
+.testimonial__avata:nth-child(odd) {
+    margin-right: 25px;
+}
+
+.testimonial__avata:nth-child(even) {
+    margin-left: 25px;
+}
+
+.testimonial__name a{
+    color: var(--color-orange);
+}
+
+.name {
+    color: var(--color-light-grey);
 }
