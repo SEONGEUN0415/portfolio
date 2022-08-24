@@ -298,20 +298,26 @@ p {
 .skillset__right {
     flex-basis: 40%;
     background-color: var(--color-light-grey);
-    
+    display: flex;
+    flex-direction: column;
 }
 
+.tools {
+    flex-basis: 50%;
+}
+
+.tools__list {
+    margin: 0;
+    padding: 12px;
+}
 .etc {
     background-color: var(--color-grey);
-    height: 50%;
-    position: relative;
-    top: 43px;   
-    padding:5px;
+    flex-basis: 50%;
 }
 
 .etc__list {
-    margin: 0;
-    padding: 10px;
+    padding: 12px;
+    margin: 0px;
 }
 
 /* Work */
@@ -496,5 +502,4 @@ p {
         text-align: center;
     }
 
-   
 }
