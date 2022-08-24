@@ -194,6 +194,7 @@ p {
 }
 .section__container {
     max-width: 950px;
+    margin: 15px;
     margin: auto;
 }
 
@@ -201,7 +202,7 @@ p {
 #about{
     background-color: var(--color-yellow);
     text-align:center;
-    padding: 10px 0;
+    padding: 10px 20px;
 }
 
 #about p {
@@ -245,11 +246,11 @@ p {
 }
 
 /* skills */
+
 #skills {
     background-color: var(--color-black);
     color: var(--color-white);
-    padding: 30px 0;
-    height: 700px;
+    padding: 30px 20px;
 }
 
 #skills p {
@@ -260,8 +261,7 @@ p {
 .skillset {
     display:flex;
     justify-content: space-around;
-    margin: 50px 0;  
-    height: 300px;
+    margin: 50px 0; 
     
 }
 .skillset__title{
@@ -280,17 +280,18 @@ p {
     padding: 20px 40px;
 }
 
+.skill__description{
+    padding-bottom: 42px;
+}
 
 .skill__bar {
-    width: 550px;
     height: 3px;
     background-color: var(--color-light-grey);
-    margin-left: 40px;
+    margin: 0 40px;
 
 }
 
 .skill__value{
-    width: 90%;
     height:3px;
     background-color: var(--color-orange);
 }
@@ -502,4 +503,27 @@ p {
         text-align: center;
     }
 
+    .major {
+        flex-direction: column;
+        align-items: center;
+    }
+    .major__item {
+        margin: 10px;
+    }
+    .skillset{
+        flex-direction: column;
+    }   
+    .project {
+        flex-grow: 1;
+    }
+    .project__img {
+        margin: auto;
+    }
+    .testimonial__avata{
+        width: 80px;
+        height: 80px;
+    }
+    .category__btn {
+        margin: 5px 0;
+    }
 }
