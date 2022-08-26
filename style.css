@@ -3,7 +3,9 @@
     /* color */
     --color-white: #ffffff;
     --color-light-white: #eeeeee;
-    --coclor-transparent-white: #ffffff9a;
+    --color-transparent-white: #ffffff9a;
+    --color-transparent-yellow: #fff7d1b3;
+    --color-transparent-orange: #feb446e3;
     --color-dark-white: #bdbdbd;
     --color-pink: #fe918d;
     --color-dark-pink: #ff6863;
@@ -73,10 +75,8 @@ li {
 h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
-    padding: 15px 0;
-    margin: 0px;
-    position:relative;
-    top:20px;
+    padding: 10px 0;
+    margin: 0;
 }
 
 h2 {
@@ -99,13 +99,18 @@ p {
 
 /* Navbar */
 #navbar {
+    position: fixed; z-index: 1;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     color: var(--color-white); 
+    background-color: transparent;
+    padding: 5 10px;   
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--appear {
     background-color: var(--color-orange);
-    padding: 5 10px;
-    
-    
 }
 
 .navbar__logo{
@@ -125,6 +130,8 @@ p {
 
 .navbar__menu {
     display: flex;
+    margin: 0 5px;
+    align-items: center;
     
 }
 .navbar__menu__item { 
@@ -135,13 +142,14 @@ p {
 }
 
 .navbar__menu__item:hover {
-    background-color: var(--coclor-transparent-white);
-    color: var(--color-light-grey);
+    background-color: var(--color-light-white);
+    color: var(--color-black);
     border-radius: var(--size-border-radious);
 }
 
 .navbar__menu__item.active {
     border: 1px solid var(--color-white);
+    border-radius: var(--size-border-radious);
 }
 
 .navbar__toggle-btn {
@@ -159,8 +167,9 @@ p {
 #home {
     background: url(images/background_circle_img.png)
     center/cover no-repeat;
-    padding: 50px;
+    padding: 100px;
     text-align: center;
+    
 }
 
 .home__avatar {
@@ -322,6 +331,10 @@ p {
 }
 
 /* Work */
+#work h1 {
+    margin-top: 30px;
+}
+
 .work__categories {
     margin: 40px;
 }
@@ -371,8 +384,9 @@ p {
     width: 250px;
     height: 250px;
     margin: 3px;
-    position: relative;
     display:flex;
+    position: relative;   
+    
 }
 
 .project__img {
@@ -381,8 +395,6 @@ p {
 }
 
 .project__description {
-    position: absolute;
-    top:0;
     width:100%;
     height: 100%;
     padding: 20px 40px;
@@ -393,6 +405,7 @@ p {
     justify-content: center;
     transition: all var(--animation-duration) ease-in;
     transform: translateY(10px);
+    position: absolute;
 }
 
 .project:hover .project__description {
