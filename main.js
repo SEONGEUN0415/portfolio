@@ -3,9 +3,7 @@
 // Make navbar transparent when it is on the top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
- document.addEventListener('scroll', () => {
-    console.log(window.scrollY);
-    console.log(`navbarHeight : ${navbarHeight}`);
+    document.addEventListener('scroll', () => {
     if(window.scrollY > navbarHeight){
         navbar.classList.add('navbar--appear');
     } else {
@@ -34,3 +32,15 @@ function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior: "smooth"}); 
 }
+
+//Handle transparent of home when it is scrolling.
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+
+document.addEventListener('scroll', () => {
+    console.log(window.scrollY);
+    console.log(`homeHeight: ${homeHeight} `);
+    console.log(1-window.scrollY / homeHeight);
+    home.style.opacity = 1- window.scrollY/homeHeight;
+    
+});
