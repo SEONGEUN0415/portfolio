@@ -213,7 +213,9 @@ p {
     text-align:center;
     padding: 10px 20px;
 }
-
+#about h1{
+    margin-top: 20px;
+}
 #about p {
     color: var(--color-light-grey);
     font-weight: var(--weight-semi-bold);
@@ -510,6 +512,7 @@ p {
     .navbar__menu{
         flex-direction: column;
         display: none;
+        z-index: 1;
     }
 
     .navbar__menu__item {
