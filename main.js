@@ -28,10 +28,7 @@ contactMe.addEventListener('click' , (event) => {
     scrollIntoView('#contact');
 })
 
-function scrollIntoView(selector) {
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: "smooth"}); 
-}
+
 
 //Handle transparent of home when it is scrolling.
 const home = document.querySelector('.home__container');
@@ -41,6 +38,28 @@ document.addEventListener('scroll', () => {
     console.log(window.scrollY);
     console.log(`homeHeight: ${homeHeight} `);
     console.log(1-window.scrollY / homeHeight);
-    home.style.opacity = 1- window.scrollY/homeHeight;
-    
+    home.style.opacity = 1- window.scrollY/homeHeight; 
 });
+
+//Show arrow button
+const arrowBtn = document.querySelector('.arrow__btn');
+
+document.addEventListener('scroll', () =>{
+    if(homeHeight / 2 < window.scrollY) {
+        arrowBtn.classList.add('visible')
+    } else {
+        arrowBtn.classList.remove('visible')
+    }
+});
+
+//Handle click on the 'arrow button'
+document.addEventListener('click', () => {
+
+    scrollIntoView('#home');
+
+})
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"}); 
+}
