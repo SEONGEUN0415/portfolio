@@ -63,7 +63,7 @@
                  but I'm looking forward to learn React and Typescript, moving forward.
                 </p>
             <div class="about__majors">
-              <ul class="major">
+            <ul class="major">
                 <li class="major__item">
                     <i class="fa-brands fa-html5"></i>   
                     <h2 class="major__title">HTML</h2>
@@ -146,19 +146,20 @@
             <h1>my work</h1>
             <h3>projects</h3>
             <div class="work__categories">
-                <button class="category__btn active">All <span class="category__count">2</span>
+                <button class="category__btn active" data-filter="*">All <span class="category__count">2</span>
                 </button>
-                <button class="category__btn">Web basic <span class="category__count">2</span>
+                <button class="category__btn" class="basic__btn" data-filter="webBasic">Web basic <span class="category__count">2</span>
                 </button>
-                <button class="category__btn">React <span class="category__count">0</span>
+                <button class="category__btn" data-filter="react">React <span class="category__count">0</span>
                 </button>
-                <button class="category__btn">Typescript <span class="category__count">0</span>
+                <button class="category__btn" data-filter="typescript">Typescript <span class="category__count">0</span>
                 </button>
             </div>
             <div class="work__projects">
                 <a href="https://github.com/SEONGEUN0415/Portfolio_clone_website" 
                 class="project"
-                target="_blank">
+                target="_blank"
+                data-type="webBasic">
                 <img class="project__img "
                 src="images/projects/project_website.png" 
                 alt="Website">
@@ -169,7 +170,8 @@
                 </a>
                 <a href="https://github.com/SEONGEUN0415/Portfolio_youtube-responsive-site" 
                 class="project"
-                target="blank">
+                target="blank"
+                data-type="webBasic">
                 <img class="project__img" 
                 src="images/projects/project_youtube.png" 
                 alt="Youtube">  
@@ -178,10 +180,8 @@
                     <span>Clone coding for responsive web with HTML and CSS</span>
                 </div>
                 </a>
-                
-            </div>
+            </div>        
         </div>
-           
         </section>
         <!-- Testimonial -->
         <section id="testimonial" class="section">

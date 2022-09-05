@@ -53,11 +53,34 @@ document.addEventListener('scroll', () =>{
 });
 
 //Handle click on the 'arrow button'
-document.addEventListener('click', () => {
+arrowBtn.addEventListener('click', () => {
 
     scrollIntoView('#home');
 
 })
+
+// Handle projects buttons
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document. querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click' ,(e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if (filter == null) {
+        return;
+    }
+    projectContainer.classList.add('anim-out');
+    setTimeout(() => {
+        projects.forEach((project) => {
+        if (filter == project.dataset.type || filter == '*') {
+            project.classList.remove('invisible');
+        } else {
+            project.classList.add('invisible');
+        }
+    });
+    projectContainer.classList.remove('anim-out')
+    }, 300);
+});
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
