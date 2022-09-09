@@ -13,9 +13,10 @@ const navbarHeight = navbar.getBoundingClientRect().height;
 
 // Handle toggle button
 const toggleBtn = document.querySelector('.navbar__toggle-btn');
-
 toggleBtn.addEventListener('click', () => {
     navbarMenu.classList.toggle('open');
+    navbar.classList.toggle('open');
+    
 });
 
 // Handle scrolling when tapping on the navbar menu
@@ -27,6 +28,7 @@ navbarMenu.addEventListener('click' , (event) => {
         return;
     } 
         navbarMenu.classList.remove('open');
+        navbar.classList.remove('open');
         scrollIntoView(link);
 })
 
