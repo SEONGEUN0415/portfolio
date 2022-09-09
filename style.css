@@ -355,19 +355,20 @@ p {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
     opacity: 1;
-    top:-10px;
+    top:-1px;
 }
 
 .category__count {
-    border: 1px solid var(--color-black);
+    border: 1px solid var(--color-orange);
     border-radius: 50%;
-    background-color: var(--color-dark-blue);
+    background-color: var(--color-white);
     font-size: 12px;
+    font-weight: var(--weight-semi-bold);
     width: 18px;
     height: 20px;
     line-height: 20px;
     display: inline-block;
-    color: var(--color-white);
+    color: var(--color-black);
     position: relative;
     top: -20px;
     right: -4px;
@@ -420,6 +421,10 @@ p {
     position: absolute;
 }
 
+.project__description h3{
+    color: var(--color-orange);
+}
+
 .project:hover .project__description {
     opacity: 0.8;
     transform: translateY(0px);
@@ -428,11 +433,11 @@ p {
 .project__description h3:after {
     content: '';
     display: block;
-    width: 30px;
+    width:70px;
     height: 2px;
     background-color: var(--color-dark-white);
     position: relative;
-    left: 40%;
+    left: 30%;
     margin-top: 10px;
 }
 /* testimonial */
@@ -541,14 +546,21 @@ p {
     
     #navbar {
         flex-direction: column;
+        background-color: var(--color-orange);
+    }
+    .navbar__logo{
+        padding: 
     }
 
     .navbar__menu{
         flex-direction: column;
-        display: none;
         z-index: 1;
+        display:none;
+        
     }
-
+    .navbar__menu.open{
+        display: block;
+    }
     .navbar__menu__item {
         text-align: center;
     }
