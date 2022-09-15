@@ -340,10 +340,11 @@ p {
 }
 
 .category__btn{
-    padding:8px 12px;
+    padding:8px 38px;
     text-align: center;
     border: 1px solid var(--color-dark-white);
     border-radius: var(--size-border-radious);
+    position: relative;
 }
 
 .category__btn.selected, 
@@ -355,7 +356,7 @@ p {
 .category__btn.selected .category__count,
 .category__btn:hover .category__count {
     opacity: 1;
-    top:-1px;
+    top:5px;
 }
 
 .category__count {
@@ -369,9 +370,9 @@ p {
     line-height: 20px;
     display: inline-block;
     color: var(--color-black);
-    position: relative;
-    top: -20px;
-    right: -4px;
+    position: absolute;
+    top: -4px;
+    right: 12px;
     opacity: 0;
     transition: all var(--animation-duration) ease-out;
 }
@@ -542,8 +543,8 @@ p {
 @media screen and (max-width: 760px) {
     :root{
           /* Font size */
-    --font-large: 28px;
-    --font-medium: 22px;
+    --font-large: 24px;
+    --font-medium: 20px;
     --font-regular: 18px;
     --font-small: 16px;
     --font-micro: 14px;
@@ -562,6 +563,12 @@ p {
     }
     .navbar__logo{
         background-color: none;
+        font-size: var(--font-small);
+    }
+    .navbar__logo img{
+        width: 32px;
+        height: 32px;
+        line-height: 70px;
     }
     .navbar__menu{
         flex-direction: column;
@@ -585,13 +592,28 @@ p {
     #home img {
         width: 120px;
         height: 120px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
     }
     .home__description {
         margin: 0;
         padding: 0;
     }
+
+    /* arrow button*/
+    .arrow__btn {
+        right: 16px;
+        bottom: 16px;
+    }
+
+    /* about */
+    #about{
+        padding-top: 45px;
+    }
+
     /* skills */
+    #skills{
+        padding: 54px;
+    }
     .major {
         flex-direction: column;
         align-items: center;
@@ -602,24 +624,47 @@ p {
     .skillset{
         flex-direction: column;
     }
+
      /* work */
+    #work{
+        padding-top: 48px;
+    }
     .project {
         flex-grow: 1;
     }
     .project__img {
         margin: auto;
     }
+    .category__btn {
+        width: 100%;
+    }
+
     /* testimonial */
+    #testimonial {
+        padding-top: 54px;
+    }
     .testimonial{
         margin: auto;
         margin: 0 16px;
+        flex-direction: column;
+        align-items: center;
+        
     }
+    .testimonial:nth-child(even){
+        flex-direction: column-reverse;
+    }
+    
     .testimonial__avata{
         width: 80px;
-        height: 80px;
+        height: 80px;        
+        
+    }
+    .testimonial__avata:nth-child(even),
+    .testimonial__avata:nth-child(odd){
+        margin:0;
+        margin-bottom: 18px;
     }
     .category__btn {
-        margin: 5px 0;
-        
+        margin: 5px 0; 
     }   
 }
