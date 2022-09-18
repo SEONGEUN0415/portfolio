@@ -63,6 +63,7 @@ button {
     border: none;
     outline: none;
     padding: 0;
+    text-decoration-color: #000000;
 }
 
 ul {
@@ -637,6 +638,7 @@ p {
     }
     .category__btn {
         width: 100%;
+        
     }
 
     /* testimonial */
